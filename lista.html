@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Home</title>
+  <title>Lista</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
@@ -20,8 +20,8 @@
   </div>
   <div class="modal">
     <div class="modal-content">
-      <input class="modal-title" placeholder="Titulo" type="text">
-      <input class="modal-text" placeholder="Criar uma tarefa..." type="text">
+      <input class="modal-title" placeholder="Titulo da lista" type="text">
+      <input class="modal-text" placeholder="Criar uma lista de tarefas..." type="text">
       <span class="modal-close-button">Fechar</span>
     </div>
   </div>
@@ -29,11 +29,20 @@
     <header>
       <h2 class="header-title">To Do</h2>
     </header>
+    <!-- AQUI ESSA PORRA -->
     <div id="form-container">
-      <form id="form" autocomplete="off">
+      <form id="form-list" autocomplete="off">
         <input id="note-title" placeholder="Titulo" type="text" required>
-        <input id="note-text" placeholder="Criar uma tarefa..." type="text">
+        <input id="note-text" placeholder="Titulo" type="text">
+        <div id="check-container">
+            <input id="note-check" name="checkbox" placeholder="Criar uma lista de tarefas..." type="checkbox">
+            <label id="label-note-check" for="checkbox">
+                <input id="note-check-text" placeholder="" type="text">
+            </label>
+        </div>
+
         <div id="form-buttons">
+        <button type="button" id="add-item-list" onclick="addNewCheckItem()">Adicionar novo item</button>
           <button type="submit" id="submit-button">Confirmar</button>
           <button type="button" id="form-close-button">Fechar</button>
         </div>
